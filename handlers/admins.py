@@ -48,7 +48,7 @@ async def update_admin(client, message):
 
 
 # Control Menu Of Player
-@Client.on_message(command(["control", f"control@{BOT_USERNAME}", "p"]))
+@Client.on_message(command(["control", f"control@{BOT_USERNAME}", "pp"]))
 @errors
 @authorized_users_only
 async def controlset(_, message: Message):
