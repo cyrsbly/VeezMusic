@@ -134,11 +134,6 @@ async def help_(client: Client, message: Message):
                         "📙 Owner Cmd", callback_data="cbowner"
                     )
                 ],
-                [
-                    InlineKeyboardButton(
-                        "📔 Fun Cmd", callback_data="cbfun"
-                    )
-                ]
             ]
         )
     )
