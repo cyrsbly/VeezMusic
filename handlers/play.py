@@ -891,7 +891,7 @@ async def ytplay(_, message: Message):
                 InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
                 InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
             ],[
-                InlineKeyboardButton("📣 Owner's Channel" url=f"https://t.me/saibuboo"),
+                InlineKeyboardButton("📣 Owner's Channel", url=f"https://t.me/saibuboo"),
                 InlineKeyboardButton("✨ Updates", url=f"https://t.me/KatarinaMusicBotUpdates")
             ],
         ]
