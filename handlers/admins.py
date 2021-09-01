@@ -53,7 +53,7 @@ async def update_admin(client, message):
 @authorized_users_only
 async def controlset(_, message: Message):
     await message.reply_text(
-        "**💡 opened music player control menu!**\n\n**💭 you can control the music player just by pressing one of the buttons below**",
+        "**💡 Music Player Control Menu!**\n\n**💭 You can control the music player just by pressing one of the buttons below.**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -74,12 +74,12 @@ async def controlset(_, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "⛔ anti cmd", callback_data="cbdelcmds"
+                        "⛔ Anti CMD", callback_data="cbdelcmds"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🛄 group tools", callback_data="cbgtools"
+                        "🛄 Group Tools", callback_data="cbgtools"
                     )
                 ],
                 [
@@ -290,7 +290,7 @@ async def cbskip(_, query: CallbackQuery):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await query.edit_message_text(f"⏭ skipped music\n\n» skipped : **{skip[0]}**\n» now playing : **{qeue[0][0]}**", reply_markup=BACK_BUTTON)
+    await query.edit_message_text(f"⏭ Skipped Music\n\n» skipped : **{skip[0]}**\n» now playing : **{qeue[0][0]}**", reply_markup=BACK_BUTTON)
 
 # (C) Veez Music Project
 
