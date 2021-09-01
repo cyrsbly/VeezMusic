@@ -142,15 +142,15 @@ def updated_stats(chat, queue, vol=100):
         if len(que) > 0:
             stats += "\n\n"
             stats += "Volume: {}%\n".format(vol)
-            stats += "Lagu dalam antrian: `{}`\n".format(len(que))
-            stats += "Sedang memutar lagu: **{}**\n".format(queue[0][0])
-            stats += "Atas permintaan: {}".format(queue[0][1].mention)
+            stats += "Song in queue: `{}`\n".format(len(que))
+            stats += "Now Playing: **{}**\n".format(queue[0][0])
+            stats += "Requested by: {}".format(queue[0][1].mention)
     else:
         stats = None
     return stats
 
 def r_ply(type_):
-    if type_ == "play":
+    if type_ == "p":
         pass
     else:
         pass
@@ -186,7 +186,7 @@ async def settings(client, message):
             await message.reply(stats, reply_markup=r_ply("pause"))
             
         else:
-            await message.reply(stats, reply_markup=r_ply("play"))
+            await message.reply(stats, reply_markup=r_ply("p"))
     else:
         await message.reply("**please turn on the voice chat first.**")
 
@@ -296,9 +296,9 @@ async def m_cb(b, cb):
             callsmusic.pytgcalls.pause_stream(chet_id)
             
             await cb.answer("Music paused!")
-            await cb.message.edit(updated_stats(m_chat, qeue), reply_markup=r_ply("play"))
+            await cb.message.edit(updated_stats(m_chat, qeue), reply_markup=r_ply("p"))
                 
-    elif type_ == "play":       
+    elif type_ == "p":       
         if (
             chet_id not in callsmusic.pytgcalls.active_calls
             ) or (
@@ -418,7 +418,7 @@ async def m_cb(b, cb):
             await cb.answer("Assistant is not connected to voice chat!", show_alert=True)
 
 
-@Client.on_message(command("play") & other_filters)
+@Client.on_message(command("p") & other_filters)
 async def play(_, message: Message):
     global que
     global useer
