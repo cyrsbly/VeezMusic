@@ -63,7 +63,7 @@ async def ban(c: Client, m: Message):
         try:
             await c.send_message(
                 user_id,
-                f"sorry, you're banned!** \n\nReason: `{ban_reason}` \nDuration: `{ban_duration}` day(s). \n\n**💬 message from owner: ask in @{GROUP_SUPPORT} if you think this was an mistake."
+                f"Sorry, you're banned by Dev!** \n\nReason: `{ban_reason}` \nDuration: `{ban_duration}` day(s)."
             )
             ban_log_text += '\n\n✅ this notification was sent to that user'
         except:
@@ -88,7 +88,7 @@ async def ban(c: Client, m: Message):
 async def unban(c: Client, m: Message):
     if len(m.command) == 1:
         await m.reply_text(
-            f"this command for unban user, read /help for more info !",
+            f"This command for unban user, read /help for more info !",
             quote=True
         )
         return
@@ -98,7 +98,7 @@ async def unban(c: Client, m: Message):
         try:
             await c.send_message(
                 user_id,
-                f"🎊 congratulations, you was unbanned!"
+                f"🎊 Congratulations, Dev unbanned you!"
             )
             unban_log_text += '\n\n✅ this notification was sent to that user'
         except:
