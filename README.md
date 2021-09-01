@@ -1,6 +1,6 @@
 <h2 align="centre">🎶 VEEZ MUSIC BOT</h2>
 
-### Veez Music is a telegram bot project that's allow you to play music on telegram voice chat group.
+### Veez Music is a telegram bot project that's allow you to play music on telegram voice chat group [![Mentioned in Awesome Python](https://awesome.re/mentioned-badge.svg)](https://github.com/levina-lab/VeezMusic)
 
 <p align="center"><a href="https://t.me/VeezMusicBot"><img src="https://telegra.ph/file/8bf3d62837cb59c3f8e7f.png" width="300"></a></p>
 <p align="center">
@@ -12,7 +12,6 @@
     <a href="https://github.com/levina-lab/VeezMusic/issues"> <img src="https://img.shields.io/github/issues/levina-lab/VeezMusic?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
     <a href="https://github.com/levina-lab/VeezMusic/network/members"> <img src="https://img.shields.io/github/forks/levina-lab/VeezMusic?color=red&logo=github&logoColor=blue&style=flat-square" /></a>  
     <a href="https://github.com/levina-lab/VeezMusic/network/members"> <img src="https://img.shields.io/github/stars/levina-lab/VeezMusic?color=red&logo=github&logoColor=blue&style=flat-square" /></a>  
-    <a href="[![Mentioned in Python Awesome](https://awesome.re/mentioned-badge.svg)](https://github.com/levina-lab/VeezMusic)" /></a>
 </p>
 
 <h3>Requirements 📝</h3>
