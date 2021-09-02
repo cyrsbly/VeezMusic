@@ -71,11 +71,6 @@ async def cbhelp(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "📔 Fun Cmd", callback_data="cbfun"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
                         "🏡 BACK TO HELP", callback_data="cbguide"
                     )
                 ]
@@ -96,18 +91,7 @@ async def cbbasic(_, query: CallbackQuery):
 /song (song name) - download song from youtube
 /search (video name) - search video from youtube detailed
 /vsong (video name) - download video from youtube detailed
-/lyric - (song name) lyrics scrapper
-/vk (song name) - download song from inline mode
-🎧 [ CHANNEL VC CMD ]
-/cplay - stream music on channel voice chat
-/cplayer - show the song in streaming
-/cpause - pause the streaming music
-/cresume - resume the streaming was paused
-/cskip - skip streaming to the next song
-/cend - end the streaming music
-/admincache - refresh the admin cache
-/ubjoinc - invite the assistant for join to your channel
-⚡ __Powered by {BOT_NAME} A.I__""",
+/lyric - (song name) lyrics scrapper""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -128,8 +112,7 @@ async def cbadvanced(_, query: CallbackQuery):
 /reload - reload bot and refresh the admin list
 /cache - refresh the admin cache
 /ping - check the bot ping status
-/uptime - check the bot uptime status
-⚡ __Powered by {BOT_NAME} A.I__""",
+/uptime - check the bot uptime status""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -160,8 +143,7 @@ async def cbadmin(_, query: CallbackQuery):
 /b and /tb (ban / temporary ban) - banned permanently or temporarily banned user in group
 /ub - to unbanned user you're banned from group
 /m and /tm (mute / temporary mute) - mute permanently or temporarily muted user in group
-/um - to unmute user you're muted in group
-⚡ __Powered by {BOT_NAME} A.I__""",
+/um - to unmute user you're muted in group""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -221,12 +203,7 @@ async def cbowner(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbfun"))
 async def cbfun(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>🏮 here is the fun commands</b>
-/chika - check it by yourself
-/wibu - check it by yourself
-/asupan - check it by yourself
-/truth - check it by yourself
-/dare - check it by yourself
+        f"""Currently not available. Sed :(
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -244,10 +221,10 @@ async def cbfun(_, query: CallbackQuery):
 async def cbguide(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""❓ HOW TO USE THIS BOT:
-1.) first, add me to your group.
-2.) then promote me as admin and give all permissions except anonymous admin.
-3.) add @{ASSISTANT_NAME} to your group or type /userbotjoin to invite her.
-4.) turn on the voice chat first before start to play music.
+1.) First, add me to your group.
+2.) Then promote me as admin and give all permissions except anonymous admin.
+3.) Add @{ASSISTANT_NAME} to your group or type /userbotjoin to invite her.
+4.) Turn on the voice chat first before start to play music.
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -275,33 +252,33 @@ async def close(_, query: CallbackQuery):
 @cb_admin_check
 async def cbback(_, query: CallbackQuery):
     await query.edit_message_text(
-        "**💡 here is the control menu of bot :**",
+        "**💡 Here is the control menu of bot:**",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⏸ pause", callback_data="cbpause"
+                        "⏸ Pause", callback_data="cbpause"
                     ),
                     InlineKeyboardButton(
-                        "▶️ resume", callback_data="cbresume"
+                        "▶️ Resume", callback_data="cbresume"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "⏩ skip", callback_data="cbskip"
+                        "⏩ Skip", callback_data="cbskip"
                     ),
                     InlineKeyboardButton(
-                        "⏹ end", callback_data="cbend"
+                        "⏹ End", callback_data="cbend"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "⛔ anti cmd", callback_data="cbdelcmds"
+                        "⛔ Anti CMN", callback_data="cbdelcmds"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🛄 group tools", callback_data="cbgtools"
+                        "🛄 Group tools", callback_data="cbgtools"
                     )
                 ],
                 [
@@ -404,7 +381,7 @@ async def cbhelps(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "📔 Fun Cmd", callback_data="cbfun"
+                        "📔 Fun Cmd (Unavailable)", callback_data="cbfun"
                     )
                 ],
                 [
