@@ -120,7 +120,7 @@ async def resume(_, message: Message):
         await message.reply_text("⏸ music resumed!")
 
 
-@Client.on_message(command("end", f"end@{BOT_USERNAME}") & other_filters)
+@Client.on_message(command(["end", f"end@{BOT_USERNAME}", "eend"]))
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
@@ -137,7 +137,7 @@ async def stop(_, message: Message):
         await message.reply_text("⏹ Streaming ended!")
 
 
-@Client.on_message(command("skip", f"skip@{BOT_USERNAME}") & other_filters)
+@Client.on_message(command(["skip", f"skip{BOT_USERNAME}", "sskip"]))
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
