@@ -1,5 +1,6 @@
 # Copyright (C) 2021 VeezMusicProject
 
+import requests
 import traceback
 import asyncio
 from asyncio import QueueEmpty
@@ -12,6 +13,7 @@ from helpers.channelmusic import get_chat_id
 from helpers.decorators import authorized_users_only, errors
 from handlers.play import cb_admin_check
 from helpers.filters import command, other_filters
+from config import BOT_USERNAME
 from callsmusic import callsmusic
 from callsmusic.queues import queues
 from config import LOG_CHANNEL, OWNER_ID, BOT_USERNAME, COMMAND_PREFIXES
@@ -120,7 +122,7 @@ async def resume(_, message: Message):
         await message.reply_text("⏸ music resumed!")
 
 
-@Client.on_message(command("end") & other_filters)
+@Client.on_message(command("end", f"end@{BOT_USERNAME}") & other_filters)
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
@@ -134,10 +136,10 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("⏹ streaming ended!")
+        await message.reply_text("⏹ Streaming ended!")
 
 
-@Client.on_message(command("skip") & other_filters)
+@Client.on_message(command("skip", f"skip@{BOT_USERNAME}") & other_filters)
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
