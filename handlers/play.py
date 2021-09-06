@@ -138,7 +138,7 @@ async def playlist(client, message):
 # ============================= Settings =========================================
 def updated_stats(chat, queue, vol=100):
     if chat.id in callsmusic.pytgcalls.active_calls:
-        stats = "Pengaturan dari **{}**".format(chat.title)
+        stats = "Settings in **{}**".format(chat.title)
         if len(que) > 0:
             stats += "\n\n"
             stats += "Volume: {}%\n".format(vol)
@@ -188,7 +188,7 @@ async def settings(client, message):
         else:
             await message.reply(stats, reply_markup=r_ply("p"))
     else:
-        await message.reply("**please turn on the voice chat first.**")
+        await message.reply("**Please turn on the voice chat first.**")
 
 
 @Client.on_message(
@@ -209,7 +209,7 @@ async def hfmm(_, message):
     status = message.text.split(None, 1)[1]
     message.chat.id
     if status == "ON" or status == "on" or status == "On":
-        lel = await message.reply("`processing...`")
+        lel = await message.reply("`Processing...`")
         if not message.chat.id in DISABLED_GROUPS:
             await lel.edit("**music player already activated.**")
             return
@@ -219,7 +219,7 @@ async def hfmm(_, message):
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
-        lel = await message.reply("`processing...`")
+        lel = await message.reply("`Processing...`")
         
         if message.chat.id in DISABLED_GROUPS:
             await lel.edit("**music player already deactivated.**")
@@ -245,7 +245,7 @@ async def p_cb(b, cb):
     if type_ == "playlist":
         queue = que.get(cb.message.chat.id)
         if not queue:
-            await cb.message.edit("**nothing is playing ❗**")
+            await cb.message.edit("**Nothing is playing ❗**")
         temp = []
         for t in queue:
             temp.append(t)
@@ -631,7 +631,7 @@ async def play(_, message: Message):
                 views = results[0]["views"]
             except Exception as e:
                 await lel.edit(
-                "**❌ song not found.** please give a valid song name."
+                "**❌ Song not found.** Please give a valid song name."
             )
                 print(str(e))
                 return
@@ -817,7 +817,7 @@ async def ytplay(_, message: Message):
             if administrator == message.from_user.id:
                 if message.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        f"<b>please add {user.first_name} to your channel first</b>",
+                        f"<b>Please add {user.first_name} to your channel first</b>",
                     )
                     pass
                 try:
@@ -879,7 +879,7 @@ async def ytplay(_, message: Message):
 
     except Exception as e:
         await lel.edit(
-            "**❗ song not found,** please give a valid song name."
+            "**❗ Song not found.** Please give a valid song name."
         )
         print(str(e))
         return
