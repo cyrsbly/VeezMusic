@@ -63,7 +63,7 @@ async def ban(c: Client, m: Message):
         try:
             await c.send_message(
                 user_id,
-                f"Sorry, this group is banned.** \n\nReason: `{ban_reason}` \nDuration: `{ban_duration}` day(s)."
+                f"Sorry, this user is banned by owner due to `{ban_reason} \nDuration: `{ban_duration}` day(s)."
             )
             ban_log_text += '\n\n✅ this notification was sent to that user'
         except:
