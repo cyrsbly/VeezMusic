@@ -51,7 +51,7 @@ async def broadcast_handler_open(_, m: Message):
 async def ban(c: Client, m: Message):
     if len(m.command) == 1:
         await m.reply_text(
-            f"this command for ban user, read /help for more info !",
+            f"This command for ban user, read /help for more info !",
             quote=True
         )
         return
@@ -63,7 +63,7 @@ async def ban(c: Client, m: Message):
         try:
             await c.send_message(
                 user_id,
-                f"Sorry, you're banned by Dev!** \n\nReason: `{ban_reason}` \nDuration: `{ban_duration}` day(s)."
+                f"Sorry, this group is banned.** \n\nReason: `{ban_reason}` \nDuration: `{ban_duration}` day(s)."
             )
             ban_log_text += '\n\n✅ this notification was sent to that user'
         except:
