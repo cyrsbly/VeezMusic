@@ -61,12 +61,12 @@ async def dare(client, message):
 async def lirik(_, message):
     try:
         if len(message.command) < 2:
-            await message.reply_text("**give a lyric name too !**")
+            await message.reply_text("**Give a lyric name too!**")
             return
         query = message.text.split(None, 1)[1]
-        rep = await message.reply_text("🔎 **searching lyrics...**")
+        rep = await message.reply_text("🔎 **Searching lyrics...**")
         resp = requests.get(f"https://api-tede.herokuapp.com/api/lirik?l={query}").json()
         result = f"{resp['data']}"
         await rep.edit(result)
     except Exception:
-        await rep.edit("**Lyrics not found.** please give a valid song name !")
+        await rep.edit("**Lyrics not found.** Please give a valid song name with arist name!")
