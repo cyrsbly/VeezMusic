@@ -203,7 +203,10 @@ async def cbowner(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbfun"))
 async def cbfun(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""Currently not available. Sed :(
+        f"""**Fun Commands**
+/truth - check it by yourself
+/dare -  check it by yourself
+
 ⚡ __Powered by {BOT_NAME} A.I__""",
         reply_markup=InlineKeyboardMarkup(
             [
