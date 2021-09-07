@@ -37,27 +37,27 @@ async def chika(client, message):
         await message.reply_text("`Something went wrong LOL...`")
 
 
-@Client.on_message(command(["trxuxh", f"txruxxth@{BOT_USERNAME}"]))
+@Client.on_message(command(["truth", f"truth@{BOT_USERNAME}"]))
 async def truth(client, message):
     try:
-        resp = requests.get("https://api-tede.herokuapp.com/api/truth").json()
+        resp = requests.get("https://api-tede.herokuapp.com/api/truth-en").json()
         results = f"{resp['message']}"
         return await message.reply_text(results)
     except Exception:
         await message.reply_text("something went wrong...")
 
 
-@Client.on_message(command(["dxaxre", f"dxxxxare@{BOT_USERNAME}"]))
+@Client.on_message(command(["dare", f"dare@{BOT_USERNAME}"]))
 async def dare(client, message):
     try:
-        resp = requests.get("https://api-tede.herokuapp.com/api/dare").json()
+        resp = requests.get("https://api-tede.herokuapp.com/api/dare-en").json()
         results = f"{resp['message']}"
         return await message.reply_text(results)
     except Exception:
         await message.reply_text("something went wrong...")
 
 
-@Client.on_message(command(["lyric", f"lyric@{BOT_USERNAME}"]))
+@Client.on_message(command(["lyrics", f"lyrics@{BOT_USERNAME}"]))
 async def lirik(_, message):
     try:
         if len(message.command) < 2:
